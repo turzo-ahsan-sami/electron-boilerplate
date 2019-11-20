@@ -9,16 +9,18 @@ function initWindow() {
     appWindow = new BrowserWindow({
         // width: 1000, 
         // height: 800,
+        center : true,
         fullscreen: true, 
         frame: false,
-        closable : true,
         backgroundColor: '#ffffff',
         webPreferences:{
             nodeIntegration: true
         }
     });
     
-    appWindow.show();
+    appWindow.once('ready-to-show', () => {
+        appWindow.show()
+    })
 
     appWindow.loadURL(`file://${__dirname}/dist/index.html`);
 

@@ -38,3 +38,20 @@ npm install electron-packager --save-dev
 
 # for use from cli
 npm install electron-packager -g
+
+
+# to run the app
+
+`npm run electron .`
+
+# to build and run 
+
+`npm run electron-build`
+
+# to build and package for windows
+
+`npm run electron-prod`
+
+# to package for windows only
+
+`npm run electron-win`
